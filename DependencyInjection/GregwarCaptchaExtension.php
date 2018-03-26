@@ -33,7 +33,8 @@ class GregwarCaptchaExtension extends Extension
         $container->setParameter('gregwar_captcha.config.expiration', $config['expiration']);
         $container->setParameter('gregwar_captcha.config.whitelist_key', $config['whitelist_key']);
 
-        $resources = $container->getParameter('twig.form.resources');
-        $container->setParameter('twig.form.resources', array_merge(array('GregwarCaptchaBundle::captcha.html.twig'), $resources));
+	/** Removed for Symfony 4*/
+        //$resources = $container->getParameter('twig.form.resources');
+        //$container->setParameter('twig.form.resources', array_merge(array('GregwarCaptchaBundle::captcha.html.twig'), $resources));
     }
 }
